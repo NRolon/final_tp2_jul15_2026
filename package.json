@@ -10,7 +10,8 @@
 		"lint": "npx @biomejs/biome check --write ."
 	},
 	"dependencies": {
-		"express": "^5.1.0"
+		"express": "^5.1.0",
+		"morgan": "^1.11.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4"
