@@ -12,5 +12,3 @@ app.get("/", (req, res) => {
 app.listen(config.PORT, () => {
 	console.log(`Servidor en http://${config.HOST}:${config.PORT}`);
 });
-
-"prueba"
