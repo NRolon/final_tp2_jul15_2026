@@ -1,0 +1,103 @@
+
+### LOGIN - LoginValido (recordar copiar el token de la respuesta para usarlo despues)
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+	"username": "admin",
+	"password": "admin123"
+}
+
+### LOGIN - LoginInvalido 
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+	"username": "admin",
+	"password": "incorrecta"
+}
+
+### POST - Crear habitacion válida (recordar copiar el id de la respuesta para usarlo despues)
+POST http://localhost:3000/api/v1/habitaciones
+Content-Type: application/json
+
+{
+	"nombre": "Suite Presidencial",
+	"plazasDisponibles": 3
+}
+
+### POST - Crear habitacion sin plazas (Para despues usarlo en el getById)
+POST http://localhost:3000/api/v1/habitaciones
+Content-Type: application/json
+
+{
+	"nombre": "Habitación en Refacción",
+	"plazasDisponibles": 0
+}
+
+### POST - El campo Nombre vacio
+POST http://localhost:3000/api/v1/habitaciones
+Content-Type: application/json
+
+{
+	"nombre": "",
+	"plazasDisponibles": 2
+}
+
+### POST - El campo plazasDisponibles incorrecto
+POST http://localhost:3000/api/v1/habitaciones
+Content-Type: application/json
+
+{
+	"nombre": "Test",
+	"plazasDisponibles": -1
+}
+
+### GET - Traer todas las habitaciones
+GET http://localhost:3000/api/v1/habitaciones
+
+### GET - Traer solo las habitaciones disponibles osea plazas > 0
+GET http://localhost:3000/api/v1/habitaciones?disponible=true
+
+### GET - Habitacion Por ID (reemplazar la ultima parte)
+GET http://localhost:3000/api/v1/habitaciones/891092b4-fdc9-4758-bee0-96564086861e
+
+### GET - ID Habitacion no correcto
+GET http://localhost:3000/api/v1/habitaciones/no-existo
+
+### PUT - Sin Token no debe funcionar
+PUT http://localhost:3000/api/v1/habitaciones/b06ff01f-c4a7-44a6-97a8-8298ad7f864e
+Content-Type: application/json
+
+{
+	"plazasDisponibles": 4
+}
+
+### PUT - Con token, sumar plazas en 1 (probar por ej de 6 a 8, arroja error ya que solo se puede a 1)
+PUT http://localhost:3000/api/v1/habitaciones/891092b4-fdc9-4758-bee0-96564086861e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzg0MTU2MDY5LCJleHAiOjE3ODQxNTk2Njl9.0gxzhgpUut5OXU8ZXEDykT32pg-LDA93TmEriGTrn7o
+
+{
+	"nombre": "Suite Renovada",
+	"plazasDisponibles": 7
+}
+
+### PUT - Con token, sumar invalido (lo mismo que arriba pero este es exclusivo para errores)
+PUT http://localhost:3000/api/v1/habitaciones/891092b4-fdc9-4758-bee0-96564086861e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzg0MTU0NTE1LCJleHAiOjE3ODQxNTgxMTV9.Hb71-rXuRqkzPQ6O62RUP93N6e37yufhqrNqm0AU7vE
+
+{
+	"plazasDisponibles": 10
+}
+
+### DELETE - Sin token
+DELETE http://localhost:3000/api/v1/habitaciones/891092b4-fdc9-4758-bee0-96564086861e
+
+### DELETE - Con token
+DELETE http://localhost:3000/api/v1/habitaciones/8cac7e87-4644-4d9a-93cf-c35d72469f38
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzg0MTU3NDk4LCJleHAiOjE3ODQxNjEwOTh9.vXY6FgNDcmef9-hB3G9smBbUiKlUWROItL06aSAdOLg
+
+### GET - Generar el csv de Pokemones
+GET http://localhost:3000/api/v1/pokemon/csv

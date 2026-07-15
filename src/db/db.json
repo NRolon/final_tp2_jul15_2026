@@ -1,0 +1,62 @@
+[
+  {
+    "id": "3ceb210d-b310-4776-9309-541acf41fde2",
+    "nombre": "Suite Presidencial",
+    "plazasDisponibles": 3,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "891092b4-fdc9-4758-bee0-96564086861e",
+    "nombre": "Suite Renovada",
+    "plazasDisponibles": 7,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "b06ff01f-c4a7-44a6-97a8-8298ad7f864e",
+    "nombre": "Suite Renovada",
+    "plazasDisponibles": 7,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "32241b1b-2177-4fbc-9397-7bb259709132",
+    "nombre": "Habitación en Refacción",
+    "plazasDisponibles": 0,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "a4b4ff4a-f015-4695-805a-220def079d0b",
+    "nombre": "Habitación en Refacción",
+    "plazasDisponibles": 0,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "eaa567ba-cf84-4b7d-94f2-379b441b2f84",
+    "nombre": "Habitación en Refacción",
+    "plazasDisponibles": 0,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "d3383fc1-0005-48a0-bf9b-f65cd0d361a9",
+    "nombre": "Habitación en Refacción",
+    "plazasDisponibles": 0,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "4835a876-2b62-4e78-bada-0db3e136ad1e",
+    "nombre": "Habitación en Refacción",
+    "plazasDisponibles": 0,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "264ff670-f401-409d-be91-a780034062b3",
+    "nombre": "Habitación en Refacción",
+    "plazasDisponibles": 0,
+    "fechaAlta": "2026-07-15"
+  },
+  {
+    "id": "21100a95-879a-4adc-83e7-b9228c4dc940",
+    "nombre": "Habitación en Refacción",
+    "plazasDisponibles": 0,
+    "fechaAlta": "2026-07-15"
+  }
+]
